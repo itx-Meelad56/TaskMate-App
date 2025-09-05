@@ -1,4 +1,4 @@
-/* 🌟 Basic Reset */
+/* 🌟 Base Styling */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    padding: 80px 20px;
     min-height: 100vh;
 }
 
@@ -202,7 +202,15 @@ header p {
 }
 
 /* 🌟 Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
     #task-input-section {
         flex-direction: column;
         align-items: center;
@@ -212,6 +220,40 @@ header p {
     #category,
     #add-task-btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
+    }
+
+    .stat-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 30px 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #task-input,
+    #category,
+    #add-task-btn {
+        max-width: 100%;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .task-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .task-buttons button {
+        width: 100%;
+        font-size: 0.9rem;
     }
 }
